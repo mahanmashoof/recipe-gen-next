@@ -10,7 +10,7 @@ const RecipeUI = (data: FilteredRecipeData) => {
           <h2 className="text-2xl md:text-3xl font-serif font-light mb-4 md:mb-6 text-slate-800 border-b-2 border-amber-600 pb-3">
             {data.title}
           </h2>
-          <h3 className="text-lg md:text-xl font-serif font-medium mb-3 text-slate-700 uppercase tracking-wide text-sm">
+          <h3 className="text-lg md:text-xl font-serif font-medium mb-3 text-slate-700 uppercase tracking-wide">
             Ingredients
           </h3>
           <ul className="space-y-2 mb-6 md:mb-8 ml-4">
@@ -28,7 +28,7 @@ const RecipeUI = (data: FilteredRecipeData) => {
               </li>
             ))}
           </ul>
-          <h3 className="text-lg md:text-xl font-serif font-medium mb-3 text-slate-700 uppercase tracking-wide text-sm">
+          <h3 className="text-lg md:text-xl font-serif font-medium mb-3 text-slate-700 uppercase tracking-wide">
             Preparation
           </h3>
           <ol className="space-y-3">
