@@ -41,7 +41,7 @@ function PortionsSelector(props: IProps) {
         min={min}
         step={step}
         onChange={handleChange}
-        className="w-14 md:w-16 h-9 md:h-10 text-center border-2 border-yellow-200 rounded-lg font-semibold text-sm md:text-base text-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+        className="w-14 md:w-16 h-9 md:h-10 text-center border-2 border-stone-300 rounded-md font-semibold text-sm md:text-base text-slate-800 bg-stone-50 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
         required
         aria-label="Portion count"
       />

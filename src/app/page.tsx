@@ -74,62 +74,62 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-yellow-500 min-h-screen overflow-hidden">
+    <div className="bg-gradient-to-br from-stone-100 via-stone-50 to-amber-50 min-h-screen overflow-hidden">
       <Navbar pHeight={navbarHeight} />
       <div
         className="p-4 md:p-8 flex md:flex-row flex-col gap-4 md:gap-8"
         style={{ minHeight: `calc(100vh - ${navbarHeight * 16}px)` }}
       >
         <form
-          className="w-full md:w-1/3 bg-white/80 rounded-xl shadow-lg flex flex-col gap-4 md:gap-6 p-4 md:p-6 justify-start border border-yellow-300"
+          className="w-full md:w-1/3 bg-white rounded-lg shadow-xl flex flex-col gap-4 md:gap-5 p-5 md:p-7 justify-start border border-stone-200"
           onSubmit={handleSubmit}
         >
-          <h2 className="text-xl md:text-2xl font-bold text-yellow-700 mb-2">
-            Recipe Generator
+          <h2 className="text-xl md:text-2xl font-serif font-light text-slate-800 mb-2 pb-3 border-b border-amber-600/30">
+            Create Your Recipe
           </h2>
-          <label className="flex flex-col gap-2 font-medium text-yellow-800 text-sm md:text-base">
+          <label className="flex flex-col gap-2 font-medium text-slate-700 text-sm md:text-base">
             Ingredients
             <textarea
-              placeholder="List ingredients here, separated by comma"
-              className="p-2 md:p-3 w-full h-20 md:h-24 rounded border border-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition text-sm md:text-base"
+              placeholder="e.g., chicken breast, tomatoes, basil..."
+              className="p-3 md:p-4 w-full h-20 md:h-24 rounded-md border border-stone-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition text-sm md:text-base bg-stone-50"
               required
               onChange={(e) => setIngredients(e.target.value)}
             />
           </label>
-          <label className="flex flex-col gap-2 font-medium text-yellow-800 text-sm md:text-base">
-            Select Diet
+          <label className="flex flex-col gap-2 font-medium text-slate-700 text-sm md:text-base">
+            Dietary Preference
             <select
-              className="p-2 md:p-3 rounded border border-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition text-sm md:text-base"
+              className="p-3 md:p-4 rounded-md border border-stone-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition text-sm md:text-base bg-stone-50"
               required
               onChange={(e) => setDiet(e.currentTarget.value)}
             >
-              <option value="">Select Diet</option>
+              <option value="">Choose your preference</option>
               <option value="balanced">Balanced</option>
-              <option value="high_fiber">High fiber</option>
-              <option value="protein_rich">Protein rich</option>
+              <option value="high_fiber">High Fiber</option>
+              <option value="protein_rich">High Protein</option>
               <option value="vegan">Vegan</option>
               <option value="vegetarian">Vegetarian</option>
             </select>
           </label>
-          <label className="flex flex-col gap-2 font-medium text-yellow-800 text-sm md:text-base">
-            Portions
+          <label className="flex flex-col gap-2 font-medium text-slate-700 text-sm md:text-base">
+            Servings
             <PortionsSelector portions={portions} setPortions={setPortions} />
           </label>
-          <label className="flex flex-col gap-2 font-medium text-yellow-800 text-sm md:text-base">
-            Cuisine
+          <label className="flex flex-col gap-2 font-medium text-slate-700 text-sm md:text-base">
+            Cuisine Style
             <input
-              className="p-2 md:p-3 rounded border border-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition text-sm md:text-base"
-              placeholder="e.g. Italian, Thai, Persian"
+              className="p-3 md:p-4 rounded-md border border-stone-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition text-sm md:text-base bg-stone-50"
+              placeholder="e.g., Italian, Japanese, Mediterranean"
               type="text"
               required
               onChange={(e) => setCuisine(e.target.value)}
             />
           </label>
-          <label className="flex flex-col gap-2 font-medium text-yellow-800 text-sm md:text-base">
-            Password
+          <label className="flex flex-col gap-2 font-medium text-slate-700 text-sm md:text-base">
+            Access Code
             <input
-              className="p-2 md:p-3 rounded border border-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition text-sm md:text-base"
-              placeholder="enter correct password to generate recipe"
+              className="p-3 md:p-4 rounded-md border border-stone-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition text-sm md:text-base bg-stone-50"
+              placeholder="Enter password"
               type="password"
               required
               onChange={(e) => setPassword(e.target.value)}
@@ -137,16 +137,16 @@ export default function Home() {
           </label>
           <button
             type="submit"
-            className="mt-2 p-2 md:p-3 bg-yellow-500 text-yellow-900 font-semibold rounded-lg shadow hover:bg-yellow-600 transition text-sm md:text-base"
+            className="mt-3 p-3 md:p-4 bg-gradient-to-r from-amber-700 to-amber-600 text-amber-50 font-medium rounded-md shadow-lg hover:from-amber-600 hover:to-amber-500 transition-all duration-200 text-sm md:text-base tracking-wide"
           >
-            🍳 Generate Recipe
+            Generate Recipe
           </button>
         </form>
-        <section className="w-full md:w-2/3 bg-white/70 rounded-xl shadow-lg p-4 md:p-6 flex flex-col">
-          <h2 className="text-lg md:text-xl font-semibold text-yellow-700 mb-4">
-            Generated Recipe
+        <section className="w-full md:w-2/3 bg-white rounded-lg shadow-xl p-5 md:p-8 flex flex-col border border-stone-200">
+          <h2 className="text-xl md:text-2xl font-serif font-light text-slate-800 mb-5 pb-3 border-b border-amber-600/30">
+            Your Recipe
           </h2>
-          <div className="p-2 md:p-3 w-full h-[50vh] md:h-[70vh] rounded border border-yellow-200 bg-yellow-50 resize-none focus:outline-none focus:ring-2 focus:ring-yellow-400 transition overflow-y-scroll">
+          <div className="p-4 md:p-6 w-full h-[50vh] md:h-[70vh] rounded-md border border-stone-200 bg-stone-50/50 overflow-y-auto">
             {loading ? <Loading /> : <RecipeUI {...filteredData} />}
           </div>
         </section>
