@@ -60,7 +60,7 @@ npm install
 
 ```
 OPENAI_API_KEY=your_openai_api_key
-GET_RECIPE_API_PASSWORD=1979
+GET_RECIPE_API_PASSWORD
 ```
 
 3. Add the `hamburger.gif` loading animation to the `public/` folder (from the original frontend repo)
